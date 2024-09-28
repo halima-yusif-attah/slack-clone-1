@@ -5,6 +5,7 @@ import { useCreateWorkSpaceModal } from "@/features/workspaces/store/use-create-
 import { useGetWorkspaces } from "@/features/workspaces/api/use-get-workspaces";
 import { useEffect, useMemo } from "react";
 import { useRouter } from "next/navigation";
+import { Loader } from "lucide-react";
 
 function Home() {
   const router = useRouter();
@@ -27,9 +28,8 @@ function Home() {
   }, [workspaceId, isLoading, open, setOpen, router]);
 
   return (
-    <div className=" size-full">
-      <UserButton />
-      <p>hello</p>
+    <div className=" size-full flex items-center justify-center"> 
+      <Loader className="size-6 animate-spin text-muted-foreground" /> 
     </div>
   );
 }
