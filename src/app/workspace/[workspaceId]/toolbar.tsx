@@ -33,12 +33,12 @@ function Toolbar() {
 
     const onChannelClick = (channelId: string) => {
       router.push(`/workspace/${workspaceId}/channel/${channelId}`)
-      setOpen(!open)  
+      setOpen(false)  
     }
 
      const onMemberClick = (memberId: string) => {
        router.push(`/workspace/${workspaceId}/member/${memberId}`)
-       setOpen(!open);     
+       setOpen(false);     
      };
 
 
